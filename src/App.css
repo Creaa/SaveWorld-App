@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background: url("https://cdn.pixabay.com/photo/2014/08/01/15/51/manhattan-407703_1280.jpg") center/cover;
+  background: url("./background.jpg") center/cover;
   overflow-x: hidden;
 }
 
