@@ -1,0 +1,34 @@
+.smoke-wrapper {
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.smoke {
+	width: 150%;
+	height: 120%;
+	animation: CloudMove 200s linear infinite;
+	opacity: 0.8;
+}
+
+
+@keyframes CloudMove {
+	0% {
+		transform: translateX(-130vw)
+	}
+
+	100% {
+		transform: translateX(100vw)
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+	.smoke {
+		display: none;
+	}
+}

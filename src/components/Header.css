@@ -1,0 +1,33 @@
+.header {
+	height: 10vh;
+	flex-direction: row-reverse;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	flex: 1;
+	margin-top: 0 auto;
+	font-size: 4.5rem;
+	margin: 15px 15px;
+	color: rgb(51, 255, 0);
+	font-family: 'Jacques Francois Shadow', cursive, sans-serif;
+}
+
+.icon {
+	width: 60px;
+	height: 60px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+	.header {
+		margin: 20px 0;
+	}
+
+	.title {
+		font-size: 1.3rem;
+	}
+}
