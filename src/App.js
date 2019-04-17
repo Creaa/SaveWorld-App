@@ -34,6 +34,7 @@ class App extends Component {
       )
       .then(res => {
         this.makeRanking(res.data.results);
+        console.log(res.data.results);
       });
   };
 
@@ -53,6 +54,7 @@ class App extends Component {
         break;
       }
     }
+    console.log(rankingList);
     this.addDescriptionToList(rankingList);
   };
 
@@ -69,12 +71,14 @@ class App extends Component {
         .then(res => {
           description =
             res.data.query.pages[Object.keys(res.data.query.pages)[0]].extract;
-          if (description && description.length < 500) {
+          if (description) {
             description = description
               .split(".")
               .slice(0, 1)
               .join(".");
-
+            if (description.length > 500) {
+              description = "No description";
+            }
             el.description = description;
             this.setState({
               citiesList: rankingList
